@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(future: _initialization,
-    builder: (context, snapshot){
+      builder: (context, snapshot){
         if(snapshot.hasError){
-          print("Something went wront");
+          print("Something went wrong");
         }
         if(snapshot.connectionState == ConnectionState.waiting){
           return Center(child: CircularProgressIndicator());
